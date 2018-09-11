@@ -1,0 +1,22 @@
+version: "3"
+services:
+  db:
+    image: postgres
+    networks:
+      - webnet
+    environment:
+      POSTGRES_PASSWORD: lu1234
+      POSTGRES_USER: luciana
+      POSTGRES_DB: news360
+
+  web:
+    image: news360
+    ports:
+      - "4500:4545"
+    networks:
+      - webnet
+    environment: 
+      DB_HOST: db  
+    command: ["./wait-for-it.sh", "db:5432", "--", "node", "app.js"]
+networks:
+  webnet:

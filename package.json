@@ -1,0 +1,27 @@
+{
+  "name": "news360",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "db:create": "createdb --echo news360",
+    "db:drop": "dropdb --echo news360",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parse": "^3.0.0",
+    "csvdata": "^1.7.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "fast-csv": "^2.4.1",
+    "hashtable": "^2.0.2",
+    "knex": "^0.15.2",
+    "morgan": "^1.9.0",
+    "pg": "^7.4.3",
+    "promise": "^8.0.1"
+  }
+}
